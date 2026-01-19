@@ -1,8 +1,8 @@
 
 // Solução simples
 
-let nomeHeroi = "Homem Aranha"
-let qtdExpXp = 10500
+let nomeHeroi = "Pokemon"
+let qtdExpXp = 8200
 let nivelHeroi = ""
 
 if(qtdExpXp <= 1000){
