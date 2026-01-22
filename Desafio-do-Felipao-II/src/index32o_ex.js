@@ -53,8 +53,21 @@ function position(balance) {
     console.log(`O Herói ${heroName} tem o saldo de -> ${playerBalance} e está no Nível -> ${hankHero}`);
   } catch (err) {
     console.error('Erro inesperado:', err);
-    
-  } finally {
-    rl.close();
-  }
-})();
+
+    perguntarContinuar();
+  
+  //} finally {
+    //rl.close();
+
+ // }})();
+
+function perguntarContinuar() {
+  rl.question('Deseja verificar outro herói? (S/N): ', (resposta) => {
+    // Converte para maiúsculo para facilitar a comparação
+    if (resposta.toUpperCase() !== 'N') {
+            executarDesafio(); // Chama a função novamente
+    } else {
+      console.log("Encerrando o programa... Até mais!!!"); //Fecha o loop de classificação
+      rl.close();
+    }
+  })}; //()
