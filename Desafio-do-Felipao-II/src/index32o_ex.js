@@ -53,8 +53,10 @@ function position(balance) {
     console.log(`O Herói ${heroName} tem o saldo de -> ${playerBalance} e está no Nível -> ${hankHero}`);
   } catch (err) {
     console.error('Erro inesperado:', err);
+  }})
+  
 
-    perguntarContinuar();
+  perguntarContinuar();
   
   //} finally {
     //rl.close();
