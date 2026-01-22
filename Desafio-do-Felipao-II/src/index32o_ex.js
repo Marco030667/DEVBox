@@ -58,10 +58,6 @@ function position(balance) {
 
   perguntarContinuar();
   
-  //} finally {
-    //rl.close();
-
- // }})();
 
 function perguntarContinuar() {
   rl.question('Deseja verificar outro herói? (S/N): ', (resposta) => {
@@ -71,5 +67,7 @@ function perguntarContinuar() {
     } else {
       console.log("Encerrando o programa... Até mais!!!"); //Fecha o loop de classificação
       rl.close();
+      }
     }
-  })}; //()
+  )
+};
