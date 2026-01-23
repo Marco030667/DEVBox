@@ -48,7 +48,7 @@ const rl = readline.createInterface({
     console.error('Erro inesperado:', err);
   }})
   
-perguntarContinuar();
+//perguntarContinuar();
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FUNÇÕES UTILITÁRIAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -58,18 +58,18 @@ function ask(question) {
 }
 
 // RESOLVE - DESEJA CONTINUAR OU NÃO
-function perguntarContinuar() {
-  rl.question('Deseja verificar outro herói? (S/N): ', (resposta) => {
+//function perguntarContinuar() {
+  //rl.question('Deseja verificar outro herói? (S/N): ', (resposta) => {
     // Converte para maiúsculo para facilitar a comparação
-    if (resposta.toUpperCase() !== 'N') {
-            main(); // Chama a função novamente
-    } else {
-      console.log("Encerrando o programa... Até mais!!!"); //Fecha o loop de classificação
-      rl.close();
-      }
-    }
-  )
-};
+    //if (resposta.toUpperCase() !== 'N') {
+      //      main(); // Chama a função novamente
+    //} else {
+    //  console.log("Encerrando o programa... Até mais!!!"); //Fecha o loop de classificação
+    //  rl.close();
+    //  }
+   // }
+ // )
+//};
 
 // RESOLVE CÁLCULO SALDO (VITÓRIAS - DERROTAS)
 function verifyBalance(victories, defeats) {
