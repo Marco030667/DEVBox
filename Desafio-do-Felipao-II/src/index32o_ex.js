@@ -49,9 +49,11 @@ function position(balance) {
     const playerBalance = verifyBalance(victories, defeats);
     const hankHero = position(playerBalance);
 
+    // Respostas enviadas ao Usuário
     console.log(`A atual classificação do Jogador é: ${playerBalance}`);
     console.log(`O Herói ${heroName} tem o saldo de -> ${playerBalance} e está no Nível -> ${hankHero}`);
-  } catch (err) {
+  
+  } catch (err) { //Tratamento de erro no Sistema 
     console.error('Erro inesperado:', err);
   }})
   
@@ -63,7 +65,7 @@ function perguntarContinuar() {
   rl.question('Deseja verificar outro herói? (S/N): ', (resposta) => {
     // Converte para maiúsculo para facilitar a comparação
     if (resposta.toUpperCase() !== 'N') {
-            executarDesafio(); // Chama a função novamente
+            main(); // Chama a função novamente
     } else {
       console.log("Encerrando o programa... Até mais!!!"); //Fecha o loop de classificação
       rl.close();
