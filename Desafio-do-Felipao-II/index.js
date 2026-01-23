@@ -41,8 +41,10 @@ async function main() {
     // EXECUTA DESEJA CONTINUAR
     const continuar = await ask('Deseja verificar outro herói? (S/N): ');
     if (continuar.toUpperCase() === 'S') {
+      console.clear();
       await main(); // CHAMA A FUNÇÃO NOVAMENTE
     } else {
+      console.clear();
       console.log("Encerrando o programa... Até mais!!!");
       rl.close();
     }
