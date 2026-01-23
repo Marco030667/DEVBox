@@ -8,7 +8,7 @@ const rl = readline.createInterface({
 });
 
 // FUNÇÃO MAIN - PROCESSAMENTO DE BASE-(entradas e saídas)
-(async function main() {
+async function main() {
   console.log("<<<<<<<<<<<<<<< CALCULADORA DE PARTIDAS RANQUEADAS >>>>>>>>>>>>>>>");
 
   // <<<<<<<<<<  ENTRADAS  >>>>>>>>>>
@@ -46,30 +46,14 @@ const rl = readline.createInterface({
     // <<<<<<<<<<  TRATAMENTO DE ERRO  >>>>>>>>>>
   } catch (err) { //Tratamento de erro no Sistema 
     console.error('Erro inesperado:', err);
-  }})
+  }}
   
-//perguntarContinuar();
-
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FUNÇÕES UTILITÁRIAS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // TRANSFORMA rl.question EM Promise PARA USAR [await] PARA AGUARDAR ENTRADA DE USUÁRIO
 function ask(question) {
   return new Promise(resolve => rl.question(question, resolve));
 }
-
-// RESOLVE - DESEJA CONTINUAR OU NÃO
-//function perguntarContinuar() {
-  //rl.question('Deseja verificar outro herói? (S/N): ', (resposta) => {
-    // Converte para maiúsculo para facilitar a comparação
-    //if (resposta.toUpperCase() !== 'N') {
-      //      main(); // Chama a função novamente
-    //} else {
-    //  console.log("Encerrando o programa... Até mais!!!"); //Fecha o loop de classificação
-    //  rl.close();
-    //  }
-   // }
- // )
-//};
 
 // RESOLVE CÁLCULO SALDO (VITÓRIAS - DERROTAS)
 function verifyBalance(victories, defeats) {
