@@ -5,7 +5,12 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-// 1. Remova os parênteses extras para que a função possa ser chamada pelo nome
+// CONVERTE A QUESTÃO EM PROMISE
+function ask(question) {
+      return new Promise(resolve => rl.question(question, resolve));
+}
+
+// FUNÇÃO MAIN - (Processamneto Principal)
 async function main() {
   console.log("\n<<<<<<<<<<<<<<< CALCULADORA DE PARTIDAS RANQUEADAS >>>>>>>>>>>>>>>");
 
@@ -59,11 +64,6 @@ async function main() {
 //####################################################################################
 
 // <<<<<<<<<< FUNÇÕES UTILITÁRIAS >>>>>>>>>>
-
-// CONVERTE A QUESTÃO EM PROMISE
-function ask(question) {
-      return new Promise(resolve => rl.question(question, resolve));
-}
 
 // CALCULA RANQUE NUMÉRICO DO HERÓI
 function verifyBalance(victories, defeats) {
