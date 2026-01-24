@@ -39,7 +39,7 @@ async function main() {
 //#################################################################################
 
       // MOSTRA RESULTADO FINAL DO RANQUE
-      console.log(`O Herói ${heroName} tem o saldo de -> ${playerBalance} e está no Nível -> ${hankHero}`);
+      console.log(`O Herói **{ ${heroName} }** tem o saldo de **{ ${playerBalance} }** e está no Nível **{ ${hankHero} }**`);
 
 //#################################################################################
 
